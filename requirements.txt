@@ -1,8 +1,7 @@
 flask
 flask-login
 msal
-pysupabase
-vertex-ai-generative
-vertex-ai-embeddings
+supabase
+google-cloud-aiplatform
 python-dotenv
 gunicorn
