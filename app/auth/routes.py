@@ -7,18 +7,18 @@ import msal
 
 @bp.route('/login')
 def login():
-    if not session.get('flow', {}):
-        flow = msal.ConfidentialClientApplication(
-            Config.AZURE_CLIENT_ID,
-            authority=f'https://login.microsoftonline.com/{Config.AZURE_TENANT_ID}',
-            client_credential=Config.AZURE_CLIENT_SECRET
-        )
-        auth_url = flow.get_authorization_request_url(
-            scopes=['User.Read'],
-            redirect_uri=url_for('auth.authorized', _external=True)
-        )
-        session['flow'] = flow.get_accounts()
-        return redirect(auth_url)
+    # if not session.get('flow', {}):
+    #     flow = msal.ConfidentialClientApplication(
+    #         Config.AZURE_CLIENT_ID,
+    #         authority=f'https://login.microsoftonline.com/{Config.AZURE_TENANT_ID}',
+    #         client_credential=Config.AZURE_CLIENT_SECRET
+    #     )
+    #     auth_url = flow.get_authorization_request_url(
+    #         scopes=['User.Read'],
+    #         redirect_uri=url_for('auth.authorized', _external=True)
+    #     )
+    #     session['flow'] = flow.get_accounts()
+    #     return redirect(auth_url)
     return redirect(url_for('chat.index'))
 
 @bp.route('/authorized')

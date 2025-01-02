@@ -39,4 +39,7 @@ class RAGChat:
         prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
         
         response = self.llm.predict(prompt)
-        return response.text
+        #chain = prompt | self.llm
+        #response = chain.invoke()
+        print(response)
+        return response
