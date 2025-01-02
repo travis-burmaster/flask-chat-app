@@ -1,0 +1,8 @@
+flask
+flask-login
+msal
+pysupabase
+vertex-ai-generative
+vertex-ai-embeddings
+python-dotenv
+gunicorn
