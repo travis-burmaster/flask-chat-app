@@ -25,3 +25,7 @@ See individual components in the `/app` directory:
 - `/auth`: Office 365 authentication
 - `/chat`: RAG implementation
 - `/templates`: Frontend views
+
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt 
